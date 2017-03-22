@@ -22,6 +22,44 @@ h6 {
 /* TOP LEVEL DIVS AND SECTIONS
 ------------------------------------------
 */
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgb(200,26,71);
+    z-index: 1;
+    top:0;
+    left:0;
+}
+.loader-circle {
+    position: absolute;
+    height: 10px;
+    width:10px;
+    background-color: white;
+    top:350px;
+    left:50%;
+    border-radius: 50%;
+    animation: load 1s infinite;
+}
+.loader-circle:first-of-type{
+    left:calc(50% - 20px);
+
+}
+.loader-circle:nth-of-type(2){
+    animation-delay:.2s;
+}
+.loader-circle:last-of-type{
+    left: calc(50% + 20px);
+    animation-delay: .4s;
+}
+@keyframes load{
+    50%{
+        top: 330px;
+    }
+    100%{
+        top: 350px;
+    }
+}
 #wrapper {
     padding-top: 30px;
     position: relative;

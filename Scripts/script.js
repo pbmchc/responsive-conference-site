@@ -225,6 +225,15 @@ function toggleTimerVisibility() {
     }
 }
 
+// hide loader
+$(window).load(function () {
+    var loader = $('.loader');
+    var loadHide = function () {
+        loader.fadeOut();
+    }
+    setTimeout(loadHide, 700);
+});
+
 function toggleWorkshopsLayout() {
     if (innerWidth == 768) {
         $('.rowspan').css('height', '205px');
