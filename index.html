@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>ConferenceIT</title>
+    <meta name="description" content="Simple scaffold for your IT conference" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="Images/logo.png" />
+    <meta property="og:title" content="ConferenceIT">
+    <meta property="og:description" content="Conference description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/animate.css" />
+    <link rel="stylesheet" href="/CSS/hover.css"/>
+    <link rel="icon" href="Images/favicon.png" />
+    <link rel="shortcut icon" href="Images/favicon.png" />
+    <link href="CSS/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Armata&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="Scripts/jquery-1.11.3.js"></script>
+    <script src="Scripts/jquery.countdown.js"></script>
+    <script src="Scripts/viewportchecker.min.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-custom navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span></span>
+                </button>
+                <a href="/" class="navbar-brand">
+                    <img id="brand-image">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="scroll-top uppercased" id="top-btn" href="#">start</a></li>
+                    <li><a class="menu-but uppercased" href="#" data-id="timeline">schedule</a></li>
+                    <li><a class="menu-but uppercased" href="#" data-id="speakers">speakers</a></li>
+                    <li><a class="menu-but uppercased" href="#" data-id="partners">partners</a></li>
+                    <li><a class="menu-but uppercased" href="#" data-id="contact">contact</a></li>
+                    <li><a class="register uppercased" style="color: rgb(218,26,75); font-weight: bold;" href="#">REGISTER</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="bg">   
+        <div class="jumbotron"> 
+            <div class="container"> 
+                <div class="col-sm-6">
+                    <h4 style="color:white" class="title-header animated slideInLeft uppercased">conference organizers</h4>
+                    <h6 style="color:white" class="title-header animated slideInLeft uppercased">ORGANIZER INFO PT 2</h6>
+                    <p style="color:white; font-size: 1.1em" class="title-text animated fadeInRight">The Great Venue Hall</p>
+                    <p style="color:white;  font-size: 1.1em" class="title-text animated fadeInRight uppercased">some big city, Poland</p>
+                    <p style="color:white;  font-size: 1.1em" class="title-text animated fadeInRight uppercased">28 june 2017</p>
+                </div>
+                <div id="timer" class="col-sm-6" style="text-align: center; display: none;">
+                    <p style="color: white; font-size: 1.1em" class="uppercased">time left till conference:</p>
+                    <span id="days" class="counter"></span>
+                    <span id="hours" style="margin-left: -15px;" class="counter"></span>
+                    <span id="minutes" style="margin-left: 85px;" class="counter"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="evenea">
+        <div id="evenea-l" class="col-sm-6">
+            <p id="evenea-txt" class="uppercased">registration</p>
+        </div>
+        <div id="evenea-r" class="col-sm-6">
+            <a href="#" id="evenea-btn">REGISTER<span style="color:white; margin-left: 7px" class="fa fa-pencil"></span></a>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div class="page-section" id="feedback">
+            <div class="container">
+                <div class="row features">
+                    <div class="col-sm-4 animated fadeInUp">
+                        <div class="text-center">
+                            <img class="feat-img" src="Images/speach.png" />
+                        </div>
+                            <p class="feat-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis nibh ut dui vulputate lobortis. Aenean porttitor ante odio, at varius augue fringilla sit amet.</p>
+                    </div>
+                    <div class="col-sm-4 animated fadeInUp delay">
+                        <div class="text-center">
+                            <img class="feat-img" src="Images/workshop.png" />
+                        </div>
+                            <p class="feat-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis nibh ut dui vulputate lobortis. Aenean porttitor ante odio, at varius augue fringilla sit amet.</p>
+                    </div>
+                    <div class="col-sm-4 animated fadeInUp delayed">
+                        <div class="text-center">
+                            <img class="feat-img" src="Images/univ.png" />
+                        </div>
+                            <p class="feat-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis nibh ut dui vulputate lobortis. Aenean porttitor ante odio, at varius augue fringilla sit amet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-section" id="features">
+            <div class="container">
+                <section id="timeline">
+                    <!--TIMELINE-->
+                    <h3 class="section-title">Schedule</h3>
+                    <div style="width: 100%; border-bottom: 3px dashed rgb(222,222,222); padding-bottom: 30px; margin-bottom: 30px;">
+                        <div class="conference-main" style="background-color: rgb(247,247,247);">
+                            <h6 style="color: rgb(13,30,58)">from 8:00</h6>
+                            <p style="color: rgb(13,30,58)"><span class="fa fa-pencil fa-2x"></span></p>
+                            <p style="color: rgb(13,30,58)">On-site registration</p>
+                        </div>                        
+                        <div class="conference-main">
+                            <h6>9:15 - 9:30</h6>
+                            <p>Lecture#1</p>
+                        </div>
+                        <div class="workshop-speaker">Speaker</div>
+                        <div class="conference-main">
+                            <h6>9:30 - 10:15</h6>
+                            <p>Lecture#2</p>
+                        </div>
+                        <div class="workshop-speaker">Speaker (Company)</div>
+                        <div class="conference-main">
+                            <h6>10:15 - 11:00</h6>
+                            <p>Lecture#3</p>
+                        </div>
+                        <div class="workshop-speaker">Speaker (Company)</div>
+                        <div class="conference-main" style="background-color: rgb(247,247,247);">
+                            <h6 style="color: rgb(13,30,58)">11:00 - 11:30</h6>
+                            <p style="color: rgb(13,30,58)"><span class="fa fa-coffee fa-2x"></span></p>
+                            <p style="color: rgb(13,30,58)">Coffee break</p>
+                        </div>
+                        <div class="conference-main">
+                            <h6>11:30 - 12:15</h6>
+                            <p>Lecture#4</p>
+                        </div>
+                        <div class="workshop-speaker">Speaker (Company)</div>
+                    </div>
+                <!--WORKSHOPS-->
+                    <h3 style="margin-bottom: 50px;" class="section-title">Workshops</h3>
+                    <section id="workshops">
+                        <div class="col-sm-4" style="text-align: center; padding-bottom: 15px;">
+                            <span class="track">Track#1</span>
+                        </div>
+                        <div class="col-sm-4" style="text-align: center; padding-bottom: 15px;">
+                            <span class="track">Track#2</span>
+                        </div>
+                        <div class="col-sm-4" style="text-align: center; padding-bottom: 15px;">
+                            <span class="track">Track#3</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="workshop-desc">
+                                    <h3>12:15 - 13:00</h3>
+                                    <p>Workshop#1</p>
+                                </div>
+                                <div class="workshop-speaker">Speaker (Company)</div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="workshop-desc">
+                                    <h3>12:15 - 13:00</h3>
+                                    <p>Workshop#2</p>
+                                </div>
+                                <div class="workshop-speaker">Speaker (Company)</div>                              
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="workshop-desc" style="height: 230px; display: table; width: 100%;">
+                                    <div style="display: table-cell; vertical-align: middle;">
+                                        <h3>12:15 - 14:00</h3>
+                                        <p>Workshop#3</p>
+                                    </div>
+                                </div>
+                                <div class="workshop-speaker">Speaker (Company)</div>
+                            </div>
+                            <div class="col-sm-8" style="margin-top: -110px">
+                                <div class="workshop-desc">
+                                    <h3>13:00 - 14:00</h3>
+                                    <p>Workshop#4</p>
+                                </div>
+                                <div class="workshop-speaker">Speaker (Company)</div>
+                            </div>
+                        </div>
+                </section>
+                <!--WORKSHOPS MOBILE-->
+                <section id="workshops-mobile">
+                    <div class="container">
+                        <ul class="nav nav-tabs bkmarks" role="tablist">
+                            <li role="presentation" class="active"><a href="#workshops1" aria-controls="workshops1" role="tab" data-toggle="tab">Track#1</a></li>
+                            <li role="presentation"><a href="#lectures" aria-controls="lectures" role="tab" data-toggle="tab">Track#2</a></li>
+                            <li role="presentation"><a href="#workshops2" aria-controls="workshops2" role="tab" data-toggle="tab">Track#3</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active in" id="workshops1" role="tabpanel">
+                                <div class="workshop-desc">
+                                    <h3>12:15 - 13:00</h3>
+                                    <p>Workshop#1</p>
+                                </div>
+                                <div class="workshop-speaker">Speaker (Company)</div>
+                                <div class="workshop-desc">
+                                    <h3>13:00 - 14:00</h3>
+                                    <p>Workshop#4</p>
+                                </div>
+                                <div class="workshop-speaker">Speaker (Company)</div>
+                            </div>
+                            <div class="tab-pane" id="lectures" role="tabpanel">
+                                <div class="workshop-desc">
+                                    <h3>12:15 - 13:00</h3>
+                                    <p>Workshop#2</p>
+                                </div>
+                                <div class="workshop-speaker">Speaker (Company)</div>    
+                                <div class="workshop-desc">
+                                    <h3>13:00 - 14:00</h3>
+                                    <p>Workshop#4</p>
+                                </div>
+                                <div class="workshop-speaker">Speaker (Company)</div>
+                            </div>
+                            <div class="tab-pane" id="workshops2" role="tabpanel">
+                                <div class="workshop-desc rowspan" style="height: 195px; display: table; width: 100%;">
+                                    <div style="display: table-cell; vertical-align: middle;">
+                                        <h3>12:15 - 14:00</h3>
+                                        <p>Workshop#3</p>
+                                    </div>
+                                </div>
+                                <div class="workshop-speaker">Speaker (Company)</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div style="width: 100%; clear: both; border-top: 3px dashed rgb(222,222,222); margin-top:40px; padding-top:20px;">
+                    <div class="conference-main">
+                        <h6>14:00 - 14:30</h6>
+                        <p>Lecture#5</p>
+                    </div>
+                    <div class="workshop-speaker">Speaker (Company)</div>
+                    <div class="conference-main">
+                        <h6>14:30 - 14:45</h6>
+                        <p>End of conference and prize draw</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="red">
+            <div style="display: table; width: 100%; height: 100%; text-align: center" class="container">
+                <div style="display: table-cell; vertical-align: middle;">
+                    <p class="red-info">Come and earn yourself a chance to win great prizes sponosored by our partners!</p>
+                    <img src="Images/heart.png" class="beat" />
+                    <p class="red-info">Prizes are sponsored by:  <a style="color: white; text-decoration: underline; font-size: 1.2em">Partner</a> and <a style="color: white; text-decoration: underline; font-size: 1.2em">Partner</a>.</p>
+                </div>
+            </div>
+        </section>
+        <section id="speakers" style="background-color: rgb(247,247,247)">
+            <div class="container" style="text-align:center; padding-bottom: 50px; padding-top:20px">
+                <div class="text-center">
+                    <h3 style="margin-bottom: 60px;" class="section-title">Speakers</h3>
+                </div>
+                <div class="row" style="text-align: center; margin-top: 40px;">
+                    <div class="col-md-3 col-xs-6">
+                        <a class="speaker-link" data-title="Speaker" data-company="Company" data-desc="Sed ipsum justo, sodales vitae vulputate quis, cursus vel libero. Nullam aliquet rutrum ultrices. Ut sodales leo mauris, at fermentum dolor sagittis et. In volutpat nibh ipsum, ac pulvinar lectus ornare et." data-speach="Lecture#3" data-src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460">
+                            <img class="image" src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460" alt="Katarzyna Kant"/>
+                            <h3 class="speaker-name">Speaker</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <a data-title="Speaker" data-company="Company" data-desc="Sed ipsum justo, sodales vitae vulputate quis, cursus vel libero. Nullam aliquet rutrum ultrices. Ut sodales leo mauris, at fermentum dolor sagittis et. In volutpat nibh ipsum, ac pulvinar lectus ornare et." data-speach="Lecture#2" class="speaker-link" data-src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460">
+                            <img class="image" src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460" alt = "" />
+                            <h3 class="speaker-name">Speaker</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <a data-title="Speaker" data-company="Company" data-desc="Sed ipsum justo, sodales vitae vulputate quis, cursus vel libero. Nullam aliquet rutrum ultrices. Ut sodales leo mauris, at fermentum dolor sagittis et. In volutpat nibh ipsum, ac pulvinar lectus ornare et." data-speach="Lecture#4" class="speaker-link" data-src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460">
+                            <img class="image" src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460" alt="Maciek Żabniak"/>
+                            <h3 class="speaker-name">Speaker</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <a data-title="Speaker" data-company="Company" data-desc="Sed ipsum justo, sodales vitae vulputate quis, cursus vel libero. Nullam aliquet rutrum ultrices. Ut sodales leo mauris, at fermentum dolor sagittis et. In volutpat nibh ipsum, ac pulvinar lectus ornare et." data-work="Workshop#1" data-speach="Lecture#1" class="speaker-link" data-src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460">
+                            <img class="image" src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460" />
+                            <h3 class="speaker-name">Speaker</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="row" style="text-align: center; margin-top: 20px;">
+                    <div class="col-md-4 col-xs-6" style="text-align: center; z-index:1;">
+                        <a class="speaker-link" data-title="Speaker" data-company="Company" data-desc="Sed ipsum justo, sodales vitae vulputate quis, cursus vel libero. Nullam aliquet rutrum ultrices. Ut sodales leo mauris, at fermentum dolor sagittis et. In volutpat nibh ipsum, ac pulvinar lectus ornare et." data-speach="Lecture#5" data-src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460">
+                            <img class="image" src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460" alt="Jacek Samujło" />
+                            <h3 class="speaker-name">Speaker</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6" style="text-align: center; z-index:1;">
+                        <a data-title="Speaker" data-company="Company" data-desc="Sed ipsum justo, sodales vitae vulputate quis, cursus vel libero. Nullam aliquet rutrum ultrices. Ut sodales leo mauris, at fermentum dolor sagittis et. In volutpat nibh ipsum, ac pulvinar lectus ornare et." data-work="Workshop#2" class="speaker-link" data-src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460">
+                            <img class="image" src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460" alt="Tomasz Belke-Uziałko" />
+                            <h3 class="speaker-name">Speaker</h3>
+                        </a>
+                    </div>
+			        <div class="col-lg-4" style="text-align: center;">
+                        <a data-title="Speaker" data-company="Company"  data-desc="Sed ipsum justo, sodales vitae vulputate quis, cursus vel libero. Nullam aliquet rutrum ultrices. Ut sodales leo mauris, at fermentum dolor sagittis et. In volutpat nibh ipsum, ac pulvinar lectus ornare et." data-work="Workshop#3" data-speach="Lecture#2" class="speaker-link" data-src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460">
+                            <img class="image" src="https://avatars2.githubusercontent.com/u/9861724?v=3&s=460" alt="Jacek Laskowski" />
+                            <h3 class="speaker-name">Speaker</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--OVERLAY-->
+            <div id="overlay"></div>
+            <div class="overlay-content animated zoomIn">
+                <a class="hdoverlay"><span class="fa fa-2x fa-close"></span></a>
+                <div id="overlay-img-div" class="col-sm-4">
+                    <img class="overlay-img" src="" />
+                </div>
+                <div id="overlay-text" class="col-sm-8">
+                    <h2 id="credentials"></h2>
+                    <p style="text-align:justify" id="description"></p>
+                    <p id="speach"></p>
+                    <p id="workshop"></p>
+                </div>
+            </div>
+        </section>
+        <section id="partners" style="background-color: white; padding-bottom: 10px;">
+            <div class="container" >
+                <div class="row" style="margin: 50px auto;">
+                    <div class="text-center" style="margin-bottom: 40px;">
+                        <h3 class="section-title">Partners</h3>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="panel-partner text-center">
+                            <div class="panel-body">
+                                <div class="image-holder hvr-bob">
+                                    <a class="fliper" href="#" target="_blank"><img class="company-img" src="Images/Logo/partner.png" />Partner</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="panel-partner text-center">
+                            <div class="panel-body">
+                                <div class="image-holder hvr-bob">
+                                    <a class="fliper" href="#" target="_blank"><img class="company-img" src="Images/Logo/partner.png" />Partner</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="panel-partner text-center">
+                            <div class="panel-body">
+                                <div class="image-holder hvr-bob">
+                                    <a class="fliper" href="#" target="_blank"><img class="company-img" src="Images/Logo/partner.png" />Partner</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="panel-partner text-center">
+                            <div class="panel-body">
+                                <div class="image-holder hvr-bob">
+                                    <a class="fliper" href="#" target="_blank"><img class="company-img" src="Images/Logo/partner.png" />Partner</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="patrons" style="background-color: white; padding-bottom: 30px;">
+            <div class="container">
+                <div class="row" style="margin-bottom: 70px;">
+                    <div class="text-center" style="margin-bottom: 40px;">
+                        <h3 class="section-title">Patronage</h3>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="panel-partner text-center">
+                            <div class="panel-body">
+                                <div class="image-holder">
+                                    <a class="fliper"><img class="company-img" src="Images/Logo/patron.png" />Patron</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="panel-partner text-center">
+                            <div class="panel-body">
+                                <div class="image-holder">
+                                    <a class="fliper"><img class="company-img" src="Images/Logo/patron.png" />Patron</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="panel-partner text-center">
+                            <div class="panel-body">
+                                <div class="image-holder">
+                                    <a class="fliper"><img class="company-img" src="Images/Logo/patron.png" />Patron</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6">
+                        <div class="panel-partner text-center">
+                            <div class="panel-body">
+                                <div class="image-holder">
+                                    <a class="fliper"><img class="company-img" src="Images/Logo/patron.png" />Patron</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="panel-partner text-center">
+                            <div class="panel-body">
+                                <div class="image-holder">
+                                    <a class="fliper"><img class="company-img" src="Images/Logo/patron.png" />Patron</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="panel-partner text-center">
+                            <div class="panel-body">
+                                <div class="image-holder">
+                                    <a class="fliper"><img class="company-img" src="Images/Logo/patron.png" />Patron</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 50px;">
+                    <div class="text-center" style="margin-bottom: 40px;">
+                        <h3 class="section-title">Honorable patronage</h3>
+                    </div>                   
+                    <div class="col-sm-6">
+                        <div class="panel-partner text-center">
+                            <div class="panel-body">
+                                <div class="honorable-patron">
+                                    <a class="fliper"><img style="max-width: 200px" src="Images/Logo/hpatron.png" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="panel-partner text-center">
+                            <div class="panel-body">
+                                <div class="honorable-patron">
+                                    <a class="fliper"><img style="max-width: 200px" src="Images/Logo/hpatron.png" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="mapa"></div>
+    <section id="contact">
+        <div class="page-section questions">
+            <div class="container text-center" id="questions-con">
+                <div class="questions-title" style="text-align: center">
+                    <i class="fa fa-envelope fa-4x"></i>
+                    <h4 style="color:white">Any questions?</h4>
+                </div>
+                <h3 class="contact-info">
+                    <a style="color: white;">contact@conference.con</a>
+                </h3>
+                <h3 class="contact-info">
+                    <a style="color: white"><span class="fa fa-facebook"></span>acebook.com/conference</a>
+                </h3>
+            </div>
+        </div>
+    </section>
+    <div class="upper scroll-top">
+        <a class="scroll-top"><span style="color: rgb(240,9,56);" class="fa fa-2x fa-arrow-up"></span></a>
+    </div>
+    <footer class="final-footer">
+        <div class="container footer-con">
+            <ul class="nav-down">
+                <li><a class="scroll-top bottom-nav" href="/">Start</a></li>
+                <li><a class="menu-but bottom-nav" href="#" data-id="timeline">Schedule</a></li>
+                <li><a class="menu-but bottom-nav" href="#" data-id="speakers">Speakers</a></li>
+                <li><a class="menu-but bottom-nav" href="#" data-id="partners">Partners</a></li>
+                <li><a class="menu-but bottom-nav" href="#" data-id="contact">Contact</a></li> 
+                <li><a class="register" href="https://liderferencja2016.evenea.pl/">Register</a></li>          
+            </ul>
+            <p style="color:white; font-size:0.8em; padding: 20px 0 0 0; opacity:0.6; text-decoration:underline">Conference sites using this template:</p>
+            <a href="http://www.liderferencja.pl/"><img style="width: 100px; margin-bottom: 30px; opacity:0.8" src="Images/Logo/lider_logo.png"/></a>
+            <br />
+            <br />
+            <p style="color: white">&copy; Copyright <a style="color: white; text-decoration: none;" href="https://pbmchc.github.io">pbmchc</a> 2016-2017</p>
+        </div>
+    </footer>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXkZZWWoI5YE8LY0GFcAw6VA_8D2A9T3U&callback=initMap"></script>
+<script src="/Scripts/bootstrap.min.js"></script>
+<script src="/Scripts/script.js"></script>
+</body>
+</html>
