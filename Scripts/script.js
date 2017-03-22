@@ -235,16 +235,16 @@ $(window).load(function () {
 });
 
 function toggleWorkshopsLayout() {
-    if (innerWidth == 768) {
-        $('.rowspan').css('height', '205px');
-    }
-    else if (innerWidth > 768) {
+    if (innerWidth > 768) {
         $('#workshops').show();
         $('#workshops-mobile').hide();
     }
     else {
         $('#workshops').hide();
         $('#workshops-mobile').show();
+        if (innerWidth == 768) {
+            $('.rowspan').css('height', '205px');
+        }
     }
 }
 

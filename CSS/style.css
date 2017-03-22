@@ -40,6 +40,7 @@ h6 {
     left:50%;
     border-radius: 50%;
     animation: load 1s infinite;
+    -webkit-animation: load 1s infinite;
 }
 .loader-circle:first-of-type{
     left:calc(50% - 20px);
@@ -47,10 +48,12 @@ h6 {
 }
 .loader-circle:nth-of-type(2){
     animation-delay:.2s;
+    -webkit-animation-delay: .2s;
 }
 .loader-circle:last-of-type{
     left: calc(50% + 20px);
     animation-delay: .4s;
+    -webkit-animation-delay: .4s;
 }
 @keyframes load{
     50%{
@@ -222,11 +225,12 @@ h6 {
      height:90px;
      width: 90px;
      background-color: rgb(13,30,58);
-     position: absolute;
-     margin-left: -115px;
      color: white;
      font-size:2.0em;
      padding: 10px 5px 0px 5px;
+     display: inline-block;
+     text-align: center;
+     margin-left: 3px;
 }
 .title-text {
     margin-left: 0px;
